@@ -5,15 +5,58 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Header</title>
+	<style>
+		/* Transparent Navbar */
+		.navbar {
+			background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for separation */
+		}
+
+		/* Text styling for navbar */
+		.navbar .nav-link, 
+		.navbar .navbar-brand, 
+		.navbar .dropdown-toggle {
+			color: white !important; /* White text */
+			font-weight: bold; /* Bold text */
+			text-transform: uppercase; /* Optional: make all uppercase */
+		}
+
+		/* Dropdown menu styling */
+		.dropdown-menu {
+			background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dropdown menu */
+			border: none; /* Remove dropdown border */
+		}
+
+		.dropdown-item {
+			color: white !important; /* White text in dropdown */
+			font-weight: bold; /* Bold text */
+		}
+
+		.dropdown-item:hover {
+			background-color: rgba(255, 255, 255, 0.2); /* Highlight effect on hover */
+			color: #ffd700 !important; /* Optional: Golden color on hover */
+		}
+
+		/* Make the Deutschland heading bigger */
+		.website-name {
+			font-size: 2.5rem; /* Larger font size */
+			font-weight: bold;
+		}
+
+		/* Align navigation items to the right */
+		.navbar-nav {
+			margin-left: auto;
+		}
+	</style>
 </head>
 
 <body>
 	<header>
 		<!-- Navigation Bar -->
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark">
 			<div class="container">
-				
-				<a href="/" class="website-name navbar-brand">Duetchland</a>
+				<!-- Deutschland Heading -->
+				<a href="/" class="website-name navbar-brand">Deutschland</a>
 				<!-- Button for mobile view -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,68 +64,77 @@
 				</button>
 				<!-- Collapsible Navbar -->
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="btn nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								About Us
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+								<li><a class="dropdown-item" href="/why-duetchland">Why Deutschland</a></li>
+								<li><a class="dropdown-item" href="/why-german">Why German</a></li>
+								<li><a class="dropdown-item" href="/benefits-of-learing-german">Benefits of Learning
+										German</a></li>
+							</ul>
+						</li>
 
 						<li class="nav-item dropdown">
-                            <a class="btn nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                About Us
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                                <li><a class="dropdown-item" href="/why-duetchland">Why Duetchland</a></li>
-                                <li><a class="dropdown-item" href="/why-german">Why German</a></li>
-                                <li><a class="dropdown-item" href="/benefits-of-learing-german">Benefits Of Learing German</a></li>
-                            </ul>
-                        </li>
+							<a class="btn nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Courses
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+								<li><a class="dropdown-item" href="/german-language-courses">German Language Courses</a>
+								</li>
+								<li><a class="dropdown-item" href="/course-highlights">Course Highlights</a></li>
+								<li><a class="dropdown-item" href="/learn-german-online">Learn German Online A1 + A2</a>
+								</li>
+							</ul>
+						</li>
 
-						<li class="nav-item dropdown">
-                            <a class="btn nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Courses
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                                <li><a class="dropdown-item" href="/german-language-courses">German Language Courses</a></li>
-                                <li><a class="dropdown-item" href="/course-highlights">Course Highlights</a></li>
-                                <li><a class="dropdown-item" href="/learn-german-online">Learn German Online A1 + A2</a></li>
-                            </ul>
-                        </li>
-						
 						<li class="nav-item"><a class="btn nav-link" href="/osd-exam">OSD Exam</a></li>
 
 						<li class="nav-item dropdown">
-                            <a class="btn nav-link dropdown-toggle" href="#" id="ausbildungDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Ausbindung
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="ausbildungDropdown">
-                                <li><a class="dropdown-item" href="/ausbildung-program">Ausbildung Program</a></li>
-                                <li><a class="dropdown-item" href="/faqs-vocational-training">FAQ's - Vocational Training</a></li>
-                            </ul>
-                        </li>
+							<a class="btn nav-link dropdown-toggle" href="#" id="ausbildungDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Ausbildung
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="ausbildungDropdown">
+								<li><a class="dropdown-item" href="/ausbildung-program">Ausbildung Program</a></li>
+								<li><a class="dropdown-item" href="/faqs-vocational-training">FAQ's - Vocational
+										Training</a></li>
+							</ul>
+						</li>
 
 						<li class="nav-item dropdown">
-                            <a class="btn nav-link dropdown-toggle" href="#" id="studyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Study In Germany
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="studyDropdown">
-                                <li><a class="dropdown-item" href="/why-study-in-germany">Why Study In Germany</a></li>
-                                <li><a class="dropdown-item" href="/bachelor-courses-in-germany">Bachelor Courses In Germany</a></li>
-                                <li><a class="dropdown-item" href="/masters-in-germany">Masters In Germany</a></li>
-                                <li><a class="dropdown-item" href="/studienkolleg-in-germany">Studienkolleg In Germany</a></li>
-                                <li><a class="dropdown-item" href="/our-services">Our Services</a></li>
-                            </ul>
-                        </li>
+							<a class="btn nav-link dropdown-toggle" href="#" id="studyDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Study In Germany
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="studyDropdown">
+								<li><a class="dropdown-item" href="/why-study-in-germany">Why Study In Germany</a></li>
+								<li><a class="dropdown-item" href="/bachelor-courses-in-germany">Bachelor Courses In
+										Germany</a></li>
+								<li><a class="dropdown-item" href="/masters-in-germany">Masters In Germany</a></li>
+								<li><a class="dropdown-item" href="/studienkolleg-in-germany">Studienkolleg In
+										Germany</a></li>
+								<li><a class="dropdown-item" href="/our-services">Our Services</a></li>
+							</ul>
+						</li>
 
 						<li class="nav-item dropdown">
-                            <a class="btn nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Blogs
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="blogsDropdown">
-                                <li><a class="dropdown-item" href="/blogs">Blogs</a></li>
-                                <li><a class="dropdown-item" href="/feed">Feed</a></li>
-                            </ul>
-                        </li>
-						
+							<a class="btn nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Blogs
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="blogsDropdown">
+								<li><a class="dropdown-item" href="/blogs">Blogs</a></li>
+								<li><a class="dropdown-item" href="/feed">Feed</a></li>
+							</ul>
+						</li>
+
 						<li class="nav-item"><a class="btn nav-link" href="/contact">Contact</a></li>
 
-						
 					</ul>
 				</div>
 			</div>
