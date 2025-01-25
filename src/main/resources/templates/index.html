@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,14 +19,17 @@
             margin: 0;
             color: white;
         }
+
         .content {
             position: relative;
             z-index: 2;
         }
+
         .navbar {
             position: relative;
             z-index: 3;
         }
+
         .overlay {
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -35,14 +39,48 @@
             height: 100%;
             z-index: 1;
         }
+
         .welcome-section {
             padding: 50px;
             border-radius: 10px;
             z-index: 2;
             position: relative;
         }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <div class="navbar">
@@ -60,41 +98,83 @@
 
     <!-- Other content -->
     <div class="container mt-4 content">
-        <div class="row">
-            <div class="col-md-4">
+        <div class ="row">
+            <!-- Ausbildung Program Card -->
+            <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{/image/9409368.jpg}" class="card-img-top" alt="Ausbildung Program">
+                    <img th:src="@{'https://www.pexels.com/photo/stars-through-the-colorful-aurora-23938388'}" class="card-img-top" alt="Ausbildung Program">
                     <div class="card-body">
                         <h5 class="card-title">Ausbildung Program</h5>
-                        <p class="card-text">Begin your career in Germany with expert training and support.</p>
+                        <p class="card-text">Begin your career in Germany with expert training and support. Our program
+                            offers hands-on learning and professional development in various industries.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <!-- Career Opportunities Card -->
+            <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{/image/image2.jpg}" class="card-img-top" alt="Career Opportunities">
+                    <img th:src="@{'https://via.placeholder.com/400x200'}" class="card-img-top" alt="Career Opportunities">
                     <div class="card-body">
                         <h5 class="card-title">Career Opportunities</h5>
-                        <p class="card-text">Explore a wide range of job opportunities tailored for you.</p>
+                        <p class="card-text">Explore a wide range of job opportunities tailored for you. We connect you
+                            with top employers and guide you through the recruitment process.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+
+            <!-- Study in Germany Card -->
+            <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{/image/image3.jpg}" class="card-img-top" alt="Study in Germany">
+                    <img th:src="@{'https://via.placeholder.com/400x200'}" class="card-img-top" alt="Study in Germany">
                     <div class="card-body">
                         <h5 class="card-title">Study in Germany</h5>
-                        <p class="card-text">Unlock your potential with top-tier education in Germany.</p>
+                        <p class="card-text">Unlock your potential with top-tier education in Germany. From bachelor's to
+                            master's programs, we have you covered.</p>
                     </div>
                 </div>
             </div>
         </div>
+           <!--Horizonatal line-->
+           <hr class="my-4" style="border-top: 2px solid white; opacity: 0.7;">
     </div>
+
+
+
+
+<!-- Information Section -->
+<div class="mt-5 text-center" style="position: relative; z-index: 2; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 40px; border-radius: 10px; max-width: 800px;">
+        <h2 style="color: white;">Deutschland - Your Career Partner in Germany</h2>
+        <p class="lead" style="color: #e0e0e0; font-size: 1.2rem;">Dear friends,</p>
+        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+            If you are constantly searching for programs to <strong>kickstart your career in Germany</strong>, 
+            look no further. Deutschland is your ideal partner for <strong>education, training, and career growth in Germany.</strong>
+        </p>
+        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+            With its central office in Greater Noida, Deutschland offers a wide range of opportunities, including 
+            <strong>online and offline courses, professional training programs,</strong> and expert guidance to help you succeed in Germany.
+        </p>
+        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+            Deutschland stands out as the go-to platform for its <strong>affordable fees, comprehensive resources,</strong> 
+            and highly experienced faculty. Our programs follow international standards, preparing you for global opportunities and success.
+        </p>
+    </div>
+    <!-- Call Now Button -->
+    <div class="mt-4">
+        <a href="tel:+1234567890" class="btn btn-primary btn-lg" style="padding: 10px 20px; font-size: 1.2rem; border-radius: 50px;">
+            Call Now to Know More
+        </a>
+    </div>
+</div>
+
+
+
 
     <!-- Footer -->
     <div class="mt-5">
         <div th:replace="footer :: footer"></div>
     </div>
 </body>
-</html>
 
+</html>
