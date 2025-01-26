@@ -78,6 +78,33 @@
         .card-text {
             font-size: 1rem;
         }
+
+        /* WhatsApp Floating Icon Style */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float img {
+            width: 35px;
+            height: 35px;
+        }
     </style>
 </head>
 
@@ -98,11 +125,11 @@
 
     <!-- Other content -->
     <div class="container mt-4 content">
-        <div class ="row">
+        <div class="row">
             <!-- Ausbildung Program Card -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{'https://www.pexels.com/photo/stars-through-the-colorful-aurora-23938388'}" class="card-img-top" alt="Ausbildung Program">
+                    <img th:src="@{'https://via.placeholder.com/400x200'}" class="card-img-top" alt="Ausbildung Program">
                     <div class="card-body">
                         <h5 class="card-title">Ausbildung Program</h5>
                         <p class="card-text">Begin your career in Germany with expert training and support. Our program
@@ -135,41 +162,34 @@
                 </div>
             </div>
         </div>
-           <!--Horizonatal line-->
-           <hr class="my-4" style="border-top: 2px solid white; opacity: 0.7;">
+        <hr class="my-4" style="border-top: 2px solid white; opacity: 0.7;">
     </div>
 
-
-
-
-<!-- Information Section -->
-<div class="mt-5 text-center" style="position: relative; z-index: 2; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 40px; border-radius: 10px; max-width: 800px;">
-        <h2 style="color: white;">Deutschland - Your Career Partner in Germany</h2>
-        <p class="lead" style="color: #e0e0e0; font-size: 1.2rem;">Dear friends,</p>
-        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
-            If you are constantly searching for programs to <strong>kickstart your career in Germany</strong>, 
-            look no further. Deutschland is your ideal partner for <strong>education, training, and career growth in Germany.</strong>
-        </p>
-        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
-            With its central office in Greater Noida, Deutschland offers a wide range of opportunities, including 
-            <strong>online and offline courses, professional training programs,</strong> and expert guidance to help you succeed in Germany.
-        </p>
-        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
-            Deutschland stands out as the go-to platform for its <strong>affordable fees, comprehensive resources,</strong> 
-            and highly experienced faculty. Our programs follow international standards, preparing you for global opportunities and success.
-        </p>
+    <!-- Information Section -->
+    <div class="mt-5 text-center" style="position: relative; z-index: 2; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="background-color: rgba(0, 0, 0, 0.7); padding: 40px; border-radius: 10px; max-width: 800px;">
+            <h2 style="color: white;">Deutschland - Your Career Partner in Germany</h2>
+            <p class="lead" style="color: #e0e0e0; font-size: 1.2rem;">Dear friends,</p>
+            <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+                If you are constantly searching for programs to <strong>kickstart your career in Germany</strong>, 
+                look no further. Deutschland is your ideal partner for <strong>education, training, and career growth in Germany.</strong>
+            </p>
+            <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+                With its central office in Greater Noida, Deutschland offers a wide range of opportunities, including 
+                <strong>online and offline courses, professional training programs,</strong> and expert guidance to help you succeed in Germany.
+            </p>
+            <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+                Deutschland stands out as the go-to platform for its <strong>affordable fees, comprehensive resources,</strong> 
+                and highly experienced faculty. Our programs follow international standards, preparing you for global opportunities and success.
+            </p>
+        </div>
     </div>
-    <!-- Call Now Button -->
-    <div class="mt-4">
-        <a href="tel:+1234567890" class="btn btn-primary btn-lg" style="padding: 10px 20px; font-size: 1.2rem; border-radius: 50px;">
-            Call Now to Know More
-        </a>
-    </div>
-</div>
 
-
-
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER&text=Hello!%20I%20am%20interested%20in%20learning%20more%20about%20Deutschland." 
+       target="_blank" class="whatsapp-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
 
     <!-- Footer -->
     <div class="mt-5">
