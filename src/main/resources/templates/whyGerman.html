@@ -1,24 +1,122 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" th:href="@{/css/bootstrap5.3.3.css}" />
-<link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
-<script th:src="@{/js/jquery-3.7.1.min.js}"></script>
-<script th:src="@{/js/bootstrap5.3.3.js}"></script>
-<title>Why German</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap5.3.3.css}" />
+    <link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap5.3.3.js}"></script>
+    <title>Why Deutschland</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
 
+        body {
+            background-image: url('https://images.pexels.com/photos/3108976/pexels-photo-3108976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        /* Overlay for better text readability */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Content styling */
+        .container {
+            position: relative;
+            z-index: 2; /* Ensures content appears above overlay */
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8); /* Light background for content */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-	<!-- Navbar -->
-    <div class="navbar">
-        <div th:replace="header :: header"></div>
-    </div>
-    <div><h1>Why German</h1></div>
-    <div><p>With its rich culture and robust economy, Germany has something for everyone, from exciting employment and business opportunities to vibrant art and music scene. Here are some interesting facts about German</p></div>
+    <!-- Overlay -->
+    <div class="overlay"></div>
 
-	<!-- Include the footer fragment -->
-	<div th:replace="footer :: footer"></div>
+    <!-- Include the header fragment -->
+    <div th:replace="header :: header"></div>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- Why Deutschland Section -->
+        <h1>Why Deutschland</h1>
+        <p>
+            The German Language Institute offers progressively structured German language courses from 
+            elementary to advanced levels in accordance with the Goethe-Institut curriculum and the 
+            Common European Framework of Reference for Languages.
+        </p>
+
+        <!-- About Section -->
+        <h1>What We're All About</h1>
+        <p>
+            We believe that the service we offer should speak for itself. At Deutschland, we are committed 
+            to creating a platform that helps you learn the German language with ease.
+        </p>
+        <p>
+            With a team of fun, talented, and dedicated people, Deutschland—The German Language Institute 
+            and the leading consultancy in India for Ausbildung in Germany—is now a nationwide popular 
+            destination to learn German offline or online.
+        </p>
+        <p>
+            Deutschland, with more than 115 partners across India, Nepal, Sri Lanka, and Malaysia, provides 
+            pre- and post-arrival services to candidates going to Germany for Ausbildung in more than 26 
+            categories.
+        </p>
+        <p>
+            Deutschland offers solutions to queries related to the German language, admissions in Germany, 
+            Ausbildung in Germany, and assistance for jobs in Germany as well as in India.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Deutschland. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>

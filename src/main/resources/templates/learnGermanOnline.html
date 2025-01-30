@@ -1,29 +1,70 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" th:href="@{/css/bootstrap5.3.3.css}" />
-<link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
-<script th:src="@{/js/jquery-3.7.1.min.js}"></script>
-<script th:src="@{/js/bootstrap5.3.3.js}"></script>
-<title>Duetchland</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap5.3.3.css}" />
+    <link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
+    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap5.3.3.js}"></script>
+    <title>Deutschland</title>
 
+    <style>
+        /* Ensure the entire page is covered */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Set a proper background image */
+        body {
+            background-image: url('https://images.pexels.com/photos/3108976/pexels-photo-3108976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white; /* Default text color */
+        }
+
+        /* Add a subtle overlay for better text readability */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Content styles */
+        .content {
+            position: relative;
+            z-index: 2; /* Ensure text is above the overlay */
+            text-align: center;
+            padding-top: 20%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
-	<!-- Navbar -->
-    <div class="navbar">
-        <div th:replace="header :: header"></div>
-    </div>
-	<!-- Main content -->
-	<div class="container mt-4 d-flex justify-content-center">
-		<h1>Welcome to Ausbildung Program</h1>
-	</div>
-	<div class="container mt-4 d-flex justify-content-center">
-	<p>With Deutchland start your Career in Germany</p>
-	</div>
+    <!-- Add an overlay for better contrast -->
+    <div class="overlay"></div>
 
-	<!-- Include the footer fragment -->
-	<div th:replace="footer :: footer"></div>
+    <!-- Main content -->
+    <div class="content">
+        <h1>Welcome to Ausbildung Program</h1>
+        <p>With Deutschland, start your Career in Germany</p>
+    </div>
 </body>
 </html>
+
+
+

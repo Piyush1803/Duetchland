@@ -1,0 +1,41 @@
+/* Transparent Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for separation */
+}
+
+/* Text styling for navbar */
+.navbar .nav-link, 
+.navbar .navbar-brand, 
+.navbar .dropdown-toggle {
+    color: white !important; /* White text */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Optional: make all uppercase */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dropdown menu */
+    border: none; /* Remove dropdown border */
+}
+
+.dropdown-item {
+    color: white !important; /* White text in dropdown */
+    font-weight: bold; /* Bold text */
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight effect on hover */
+    color: #ffd700 !important; /* Optional: Golden color on hover */
+}
+
+/* Make the Deutschland heading bigger */
+.website-name {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold;
+}
+
+/* Align navigation items to the right */
+.navbar-nav {
+    margin-left: auto;
+}
