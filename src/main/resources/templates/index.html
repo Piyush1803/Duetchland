@@ -5,104 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" th:href="@{/css/bootstrap5.3.3.css}" />
-    <link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
-    <script th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/customNavbar.css}" />
     <script th:src="@{/js/bootstrap5.3.3.js}"></script>
+    <script th:src="@{/js/customNavbar.js}"></script>
     <title>Deutschland - Index</title>
-    <style>
-        body {
-            background-image: url('https://wallpapercave.com/wp/wp9022327.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100%;
-            margin: 0;
-            color: white;
-        }
-
-        .content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .navbar {
-            position: relative;
-            z-index: 3;
-        }
-
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .welcome-section {
-            padding: 50px;
-            border-radius: 10px;
-            z-index: 2;
-            position: relative;
-        }
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 20px;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .card-text {
-            font-size: 1rem;
-        }
-    </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="navbar">
-        <div th:replace="header :: header"></div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a th:href="@{/}" class="navbar-brand">Deutschland</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/about-us}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/osd-exam}">OSD Exam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/contact}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Overlay -->
     <div class="overlay"></div>
 
-    <!-- Main content with background image -->
-    <div class="container mt-5 text-center welcome-section content">
-        <h1>Welcome to Deutschland</h1>
+    <!-- Main Content -->
+    <div class="container mt-5 text-center welcome-section content" style="padding-top: 100px;">
+        <h1 class="display-4">Welcome to Deutschland</h1>
         <p class="lead">Your gateway to a bright career in Germany.</p>
     </div>
 
-    <!-- Other content -->
+    <!-- Cards Section -->
     <div class="container mt-4 content">
-        <div class ="row">
+        <div class="row">
             <!-- Ausbildung Program Card -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{'https://www.pexels.com/photo/stars-through-the-colorful-aurora-23938388'}" class="card-img-top" alt="Ausbildung Program">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Ausbildung Program">
                     <div class="card-body">
                         <h5 class="card-title">Ausbildung Program</h5>
                         <p class="card-text">Begin your career in Germany with expert training and support. Our program
@@ -114,7 +63,7 @@
             <!-- Career Opportunities Card -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{'https://via.placeholder.com/400x200'}" class="card-img-top" alt="Career Opportunities">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Career Opportunities">
                     <div class="card-body">
                         <h5 class="card-title">Career Opportunities</h5>
                         <p class="card-text">Explore a wide range of job opportunities tailored for you. We connect you
@@ -126,55 +75,59 @@
             <!-- Study in Germany Card -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img th:src="@{'https://via.placeholder.com/400x200'}" class="card-img-top" alt="Study in Germany">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Study in Germany">
                     <div class="card-body">
                         <h5 class="card-title">Study in Germany</h5>
-                        <p class="card-text">Unlock your potential with top-tier education in Germany. From bachelor's to
+                        <p class="card-text">Unlock your potential with top-tier education in Germany. From bachelor's
+                            to
                             master's programs, we have you covered.</p>
                     </div>
                 </div>
             </div>
         </div>
-           <!--Horizonatal line-->
-           <hr class="my-4" style="border-top: 2px solid white; opacity: 0.7;">
+        <hr class="my-4" style="border-top: 2px solid white; opacity: 0.7;">
     </div>
 
-
-
-
-<!-- Information Section -->
-<div class="mt-5 text-center" style="position: relative; z-index: 2; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-    <div style="background-color: rgba(0, 0, 0, 0.7); padding: 40px; border-radius: 10px; max-width: 800px;">
-        <h2 style="color: white;">Deutschland - Your Career Partner in Germany</h2>
-        <p class="lead" style="color: #e0e0e0; font-size: 1.2rem;">Dear friends,</p>
-        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
-            If you are constantly searching for programs to <strong>kickstart your career in Germany</strong>, 
-            look no further. Deutschland is your ideal partner for <strong>education, training, and career growth in Germany.</strong>
-        </p>
-        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
-            With its central office in Greater Noida, Deutschland offers a wide range of opportunities, including 
-            <strong>online and offline courses, professional training programs,</strong> and expert guidance to help you succeed in Germany.
-        </p>
-        <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
-            Deutschland stands out as the go-to platform for its <strong>affordable fees, comprehensive resources,</strong> 
-            and highly experienced faculty. Our programs follow international standards, preparing you for global opportunities and success.
-        </p>
+    <!-- Information Section -->
+    <div class="mt-5 text-center content"
+        style="position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+        <div style="background-color: rgba(0, 0, 0, 0.7); padding: 40px; border-radius: 10px; max-width: 800px;">
+            <h2 style="color: white;">Deutschland - Your Career Partner in Germany</h2>
+            <p class="lead" style="color: #e0e0e0; font-size: 1.2rem;">Dear friends,</p>
+            <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+                If you are constantly searching for programs to <strong>kickstart your career in Germany</strong>,
+                look no further. Deutschland is your ideal partner for <strong>education, training, and career growth in
+                    Germany.</strong>
+            </p>
+            <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+                With its central office in Greater Noida, Deutschland offers a wide range of opportunities, including
+                <strong>online and offline courses, professional training programs,</strong> and expert guidance to help
+                you succeed in Germany.
+            </p>
+            <p style="color: #e0e0e0; text-align: justify; font-size: 1rem; line-height: 1.8;">
+                Deutschland stands out as the go-to platform for its <strong>affordable fees, comprehensive
+                    resources,</strong>
+                and highly experienced faculty. Our programs follow international standards, preparing you for global
+                opportunities and success.
+            </p>
+        </div>
+        <!-- Call Now Button -->
+        <div class="mt-4">
+            <a href="tel:+1234567890" class="btn btn-primary btn-lg"
+                style="padding: 10px 20px; font-size: 1.2rem; border-radius: 50px;">
+                Call Now to Know More
+            </a>
+        </div>
     </div>
-    <!-- Call Now Button -->
-    <div class="mt-4">
-        <a href="tel:+1234567890" class="btn btn-primary btn-lg" style="padding: 10px 20px; font-size: 1.2rem; border-radius: 50px;">
-            Call Now to Know More
-        </a>
-    </div>
-</div>
-
-
-
 
     <!-- Footer -->
-    <div class="mt-5">
-        <div th:replace="footer :: footer"></div>
-    </div>
+    <footer class="bg-dark text-white mt-5 content">
+        <!-- Footer -->
+        <div class="mt-5">
+            <div th:replace="footer :: footer"></div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

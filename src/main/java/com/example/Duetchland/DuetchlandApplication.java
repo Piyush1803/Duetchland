@@ -10,4 +10,5 @@ public class DuetchlandApplication {
 		SpringApplication.run(DuetchlandApplication.class, args);
 	}
 
+	
 }
