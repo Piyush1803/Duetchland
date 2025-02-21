@@ -1,29 +1,24 @@
+/* ========================== */
+/* Global Background Settings */
+/* ========================== */
+
 body {
-    background-image: url('https://wallpapercave.com/wp/wp9022327.jpg');
+    background-image: url('https://wallpapercave.com/wp/wp9022327.jpg'); /* Default Background */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+    min-height: 100vh; /* Ensure full-page coverage */
     margin: 0;
     color: white;
 }
 
-.content {
-    position: relative;
-    z-index: 2;
+/* Overlapping Background for About Page */
+body.about-us-page {
+    background: url('https://images.pexels.com/photos/756688/pexels-photo-756688.jpeg') no-repeat center center/cover;
+    color: white;
 }
 
-.navbar {
-    position: relative;
-    z-index: 3;
-    background-color: transparent !important; /* Transparent navbar */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.navbar.scrolled {
-    background-color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent on scroll */
-}
-
+/* Background Overlay */
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -34,12 +29,136 @@ body {
     z-index: 1;
 }
 
+/* ========================== */
+/* Navbar Styling */
+/* ========================== */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #f8f9fa !important;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 1rem;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Social Media Icons */
+.navbar-nav .nav-item .nav-link i {
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px;
+}
+
+/* Social Media Icon Colors */
+.navbar-nav .nav-item .nav-link .fa-youtube {
+    color: red;
+}
+
+.navbar-nav .nav-item .nav-link .fa-instagram {
+    color: #E1306C;
+}
+
+.navbar-nav .nav-item .nav-link .fa-envelope {
+    color: white;
+}
+
+.navbar-nav .nav-item .nav-link i:hover {
+    transform: scale(1.2);
+}
+
+/* ========================== */
+/* Blog Section Styling */
+/* ========================== */
+
+.blog-section {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Responsive Blog Section */
+@media (max-width: 768px) {
+    .blog-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Blog Headings & Paragraph */
+.blog-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.blog-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Blog Images */
+.blog-section img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Blog Text Box */
+.blog-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+/* ========================== */
+/* Welcome Section */
+/* ========================== */
+
 .welcome-section {
     padding: 50px;
     border-radius: 10px;
     z-index: 2;
     position: relative;
 }
+
+/* ========================== */
+/* Card Styling */
+/* ========================== */
 
 .card {
     border: none;
@@ -72,21 +191,4 @@ body {
 
 .card-text {
     font-size: 1rem;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white !important;
-}
-
-.nav-link {
-    color: rgba(255, 255, 255, 0.8) !important;
-    margin: 0 10px;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    color: white !important;
-    transform: translateY(-2px);
 }

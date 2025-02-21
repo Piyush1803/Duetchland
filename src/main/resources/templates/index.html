@@ -8,6 +8,11 @@
     <link rel="stylesheet" th:href="@{/css/customNavbar.css}" />
     <script th:src="@{/js/bootstrap5.3.3.js}"></script>
     <script th:src="@{/js/customNavbar.js}"></script>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    
     <title>Deutschland - Index</title>
 </head>
 
@@ -25,12 +30,27 @@
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/about-us}">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/osd-exam}">OSD Exam</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact</a>
-                    </li>
+                
+                
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/your_instagram_username" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="mailto:your_email@example.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.youtube.com/@your_youtube_channel" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        
+                    
                 </ul>
             </div>
         </div>

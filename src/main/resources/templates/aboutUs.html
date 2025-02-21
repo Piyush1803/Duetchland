@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" th:href="@{/css/bootstrap5.3.3.css}" />
     <link rel="stylesheet" th:href="@{/css/customNavbar.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- JS Files -->
     <script th:src="@{/js/bootstrap5.3.3.js}"></script>
     <script th:src="@{/js/customNavbar.js}"></script>
-    <title>Deutschland - Index</title>
-    
+
+    <title>About Us - Deutschland</title>
 </head>
 
-<body>
+<body class="about-us-page">
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -27,10 +33,19 @@
                         <a class="nav-link" th:href="@{/about-us}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/osd-exam}">OSD Exam</a>
+                        <a class="nav-link" href="https://www.instagram.com/your_instagram_username" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact</a>
+                        <a class="nav-link" href="mailto:your_email@example.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/@your_youtube_channel" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -42,18 +57,75 @@
 
     <!-- Main Content -->
     <div class="container mt-5 text-center welcome-section content" style="padding-top: 100px;">
-        <h1 class="display-4">Welcome to Deutschland</h1>
-        <p class="lead">Your gateway to a bright career in Germany.</p>
+        <h1 class="display-4">Our Journey & Opportunities in Germany</h1>
+        <p class="lead">Explore real experiences and career pathways</p>
     </div>
 
-   
+    <!-- Blog Section -->
+    <div class="container mt-5">
+    
+        <!-- Section 1 -->
+        <div class="row blog-section align-items-center mb-5">
+            <div class="col-md-6">
+                <img src="your-image-url-1.jpg" class="img-fluid rounded" alt="Journey to India">
+            </div>
+            <div class="col-md-6">
+                <div class="blog-text">
+                    <h2>1. How He Came & What He Did in India</h2>
+                    <p>Discover how he arrived in India, what he has achieved, and how far he has progressed in learning the German language.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section 2 -->
+        <div class="row blog-section align-items-center mb-5 flex-md-row-reverse">
+            <div class="col-md-6">
+                <img src="your-image-url-2.jpg" class="img-fluid rounded" alt="Personal Experience">
+            </div>
+            <div class="col-md-6">
+                <div class="blog-text">
+                    <h2>2. Personal Experience</h2>
+                    <p>A firsthand account of challenges, cultural experiences, and personal growth during the transition to a new country.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section 3 -->
+        <div class="row blog-section align-items-center mb-5">
+            <div class="col-md-6">
+                <img src="your-image-url-3.jpg" class="img-fluid rounded" alt="Hotel Management Trainee">
+            </div>
+            <div class="col-md-6">
+                <div class="blog-text">
+                    <h2>3. Management Trainee at a 4-Star Hotel</h2>
+                    <p>Insights into working as a management trainee at a prestigious hotel, including responsibilities, learning, and career growth.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section 4 -->
+        <div class="row blog-section align-items-center mb-5 flex-md-row-reverse">
+            <div class="col-md-6">
+                <img src="your-image-url-4.jpg" class="img-fluid rounded" alt="Part-Time Jobs in Germany">
+            </div>
+            <div class="col-md-6">
+                <div class="blog-text">
+                    <h2>4. Part-Time Work Opportunities in Germany</h2>
+                    <p>Exploring the possibilities of part-time jobs in Germany, how to apply, and which industries offer the best opportunities.</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
     <!-- Footer -->
     <footer class="bg-dark text-white mt-5 content">
-        <!-- Footer -->
-        <div class="mt-5">
+        <div class="container text-center py-3">
             <div th:replace="footer :: footer"></div>
         </div>
     </footer>
+
 </body>
 
 </html>
+

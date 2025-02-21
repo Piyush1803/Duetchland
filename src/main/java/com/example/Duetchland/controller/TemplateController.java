@@ -14,12 +14,7 @@ public class TemplateController {
         return "index";
     }
     
-   
-    @GetMapping("/osd-exam")
-    public String osdExam() {
-        return "osdExam";
-    }
-   
+     
     
     @GetMapping("/contact")
     public String contact() {
